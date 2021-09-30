@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Component Library</title>
+    <!-- CSS Way one 
+        <style>
+        body{
+            color: red;
+        }
+
+    </style> -->
+
+    <!-- Third way of doing CSS -->
+    <link href="/Lecture-3/styles.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <h1 id="lib-header"> Vinay Component Library</h1>
+    <!-- Second way of doing css is using as attribute inside tags -->
+    <!-- style='color: red; -->
+    <p class="para"> I am attending neogcamp and I want to make a library which would make all my projects look good and consistent
+    </p>
+    <hr>
+    <h2> @Typography</h2>
+    <h1>This is the biggest heading</h1>
+    <h2>Second biggest heading</h2>
+    <p class="para"> Normal text line are written</p>
+    <p> This para has <strong> bold</strong> text</p>
+    <small class="para"> Very small letters are written </small>
+    <hr>
+
+    <h2>@Container</h2>
+
+    <h3>@fluid container</h3>
+    <div class="container"> This is a fluid container and it will go full width of the page </div>
+
+    <h3>@center container</h3>
+    <div class="container container-center"> This is a centered container and it will go till the specified width</div>
+    <hr>
+
+    <h2>@Links</h2>
+    <a class="link link-primary"href= />Primary Link</a>
+    <a class="link link-secondary"href= />Secondary Link</a>
+    <hr>
+    <h2>@Lists</h2>
+    <h3> This is a unordered list</h3>
+    <ul class="list-non-bullet">
+        <li>Item one</li>
+        <li>Item two</li>
+        <li>item three</li>
+
+    </ul>
+
+    <ul class='list-non-bullet'>
+        <li class="list-item-inline">Inline Item one</li>
+        <li class="list-item-inline">Inline Item two</li>
+        <li class="list-item-inline">Inline Item three</li>
+    </ul>
+    <h3> reverse ordered list</h3>
+    <ol reversed>
+        <li>milk</li>
+        <li>eggs</li>
+        <li>break</li>
+    </ol> 
+    <hr>
+    <h2>@Nav</h2>
+    <nav class="navigation container">
+        <div class="navBrand">I am Developer</div>
+        <ul class="list-non-bullet nav-pills">
+            
+            <li class="list-item-inline">
+                <a class="link link-active" href= />Home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link " href= />Projects</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link " href= />About Me</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link "  href= />Blogs</a>
+            </li>
+        </ul>
+    </nav>
+    <hr> 
+    <h2>@   header</h2>
+    <header class="hero">
+        <img class="hero-img" src="/Lecture-3/images/hero.svg" />
+        <h1 class="hero-heading">Vinay Vemuri <span class="heading-inverted">The Web Developer</span></h1>
+    </header>
+
+    <hr>
+
+    <h2>@Section</h2>
+
+    <section class="section">
+        <div class="container  container-center"> 
+        <h1>@white section</h1>
+        <p>
+            Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.</p>
+        </div>
+    </section>
+    <section class="section ow">
+        <div class="container  container-center"> 
+        <h1>@offwhite section</h1>
+        <p>
+            Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.</p>
+        </div>
+    </section>
+        
+    <hr>
+    <h2>@Footer</h2>
+    <footer class="footer">
+        <div class="footer-header">Small heading inside footer</div>
+        <ul class="social-links list- non-bullet">
+            <li class="list-item-inline">
+                 <a class="link
+                 " href="/" >
+                Socialone
+                </a>
+            </li>
+            <li class="list-item-inline">
+                 <a class=link href="/" >
+                Socialtwo
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class=link   href="/" >
+                Socialthree
+                </a>
+            </li>
+        
+        </ul>
+    </footer>
+    
+
+</body>
+
+</html>

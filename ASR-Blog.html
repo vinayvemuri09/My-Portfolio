@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Speech Recognition </title>
+</head>
+
+<body>
+    <h1> Understanding Automatic Speech Recognition </h1>
+
+    <h2>What is ASR?</h2>
+    <p> ASR or Automatic Speech Recognition is the process of converting input audio (speech) into text. This can be
+        done using a speech-to-text system which generally comprises a deep learning model. These deep learning models
+        have evolved quite a lot (from HMM-GMM to LSTMs, to Transformers) in the last two decades with a major
+        improvement in recognition accuracy. But, here we are not interested in building these models, rather we want to
+        get a feel of using them.</p>
+
+    <h2> How to use an ASR System?</h2>
+
+    <p>Nowadays, there are a lot of providers in the market who provide ASR as a service. Some of the popular ones are
+        Google, Microsoft Azure, Nuance etc.</p>
+
+
+
+    <p>To use any of these ASR APIs, we need to have a cloud service account. For example, in the case of Google, we need
+        to make a Google Cloud Platform account. Once logged into GCP, we need to install the ASR service. To do that enter
+        the following code in the terminal.</p>
+
+    <p><b>pip3 install --user --upgrade google-cloud-speech</b></p>
+
+    <p>Once it is done, we open the ipython shell and use the following code for speech to text.</p>
+
+    <p> <b>from google.cloud import speech_v1 as asr</b> </p>
+
+
+
+    <p><b>ef perform_asr(config, audio):
+    
+        client = asr.SpeechClient()
+    
+        transcripts = client.recognize(config=config, audio=audio)
+    
+        print(transcripts)
+    
+    
+    
+        config = dict(language_code="en-US")
+    
+        audio = dict(uri="gs://cloud-samples-data/speech/brooklyn_bridge.flac")
+    
+        perform_asr(config, audio)</b></p> 
+
+
+    <p>Executing the above code will give us a list of responses with its confidence score. The one with a higher
+        confidence score has a higher chance of being the correct transcription for the given audio.</p>
+
+    <h2>Drawbacks of the Current ASR Models</h2>
+
+    <p>Although we have come a long way in the past few years when it comes to ASR, there is still a very long way to go. The current ASR models lack in many aspects, some of them are listed below</p>
+
+    <ul>
+        <li>The accuracy of an ASR model is subjective to the speaker's way of talking, including his accent, talking speed, length, and amount of pauses he takes. All these make it impossible to build a universal ASR model. </li>
+        <li>It required a varied and large amount of data to train an ASR system even for one geographical location which has people with the same accent.</li>
+        <li>Any kind of background disturbance or noise can impact the transcription accuracy badly.</li>
+        
+    </ul>
+
+</body>
+
+</html>
